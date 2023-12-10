@@ -23,10 +23,9 @@ export function calculateInvestmentResults({
     totalInterest += interestEarnedInYear;
     investedValue = investmentValue - totalInterest;
     annualData.push({
-      year: i + 1, // year identifier
+      year: i + 1,
       interest: formatter.format(interestEarnedInYear),
       valueEndOfYear: formatter.format(investmentValue),
-      // annualInvestment: formatter.format(annualInvestment),
       totalInterest: formatter.format(totalInterest),
       investedValue: formatter.format(investedValue),
     });
