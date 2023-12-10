@@ -14,11 +14,17 @@ export default function ResultTable({ resultArr }) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{resultArr[0].year}</td>
-            <td>{resultArr[0].valueEndOfYear}</td>
-            <td>{resultArr[0].interest}</td>
-          </tr>
+          {resultArr.map((item) => {
+            return (
+              <tr key={item.year}>
+                <td>{item.year}</td>
+                <td>{item.valueEndOfYear}</td>
+                <td>{item.interest}</td>
+                <td>{item.totalInterest}</td>
+                <td>{item.investedValue}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </section>
