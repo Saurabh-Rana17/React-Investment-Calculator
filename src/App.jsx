@@ -9,6 +9,7 @@ function App() {
   const [annInvest, setAnnInvest] = useState(1200);
   const [expReturn, setExpReturn] = useState(6);
   const [duration, setDuration] = useState(10);
+  let isValid = false;
   let result;
 
   function handleChange(event) {
@@ -32,6 +33,9 @@ function App() {
       expectedReturn: expReturn,
       duration,
     });
+    if (initInvest && annInvest && expReturn && duration) {
+      isValid = true;
+    }
   }
   return (
     <>
@@ -62,7 +66,7 @@ function App() {
           />
         </div>
       </section>
-      <ResultTable resultArr={result} />
+      {isValid && <ResultTable resultArr={result} />}
     </>
   );
 }
