@@ -11,8 +11,6 @@ export function calculateInvestmentResults({
   expectedReturn,
   duration,
 }) {
-  console.log(initialInvestment, annualInvestment, expectedReturn, duration);
-
   const annualData = [];
   let investmentValue = Number(initialInvestment);
   let totalInterest = 0;
@@ -33,7 +31,6 @@ export function calculateInvestmentResults({
       investedValue: formatter.format(investedValue),
     });
   }
-  console.log(annualData[0]);
   return annualData;
 }
 
