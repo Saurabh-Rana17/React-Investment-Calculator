@@ -1,32 +1,26 @@
 import React from "react";
 
-export default function ResultTable() {
+export default function ResultTable({ resultArr }) {
   return (
-    <table id="result">
-      <thead>
-        <tr>
-          <th>one </th>
-          <th>two </th>
-          <th>three</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>q</td>
-          <td>w</td>
-          <td>d</td>
-        </tr>
-        <tr>
-          <td>qhw</td>
-          <td>qhweqrerw</td>
-          <td>qweehw</td>
-        </tr>
-        <tr>
-          <td>qhw</td>
-          <td>qhweqrerw</td>
-          <td>qweehw</td>
-        </tr>
-      </tbody>
-    </table>
+    <section>
+      <table id="result">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Investment Value </th>
+            <th>Interest(Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{resultArr[0].year}</td>
+            <td>{resultArr[0].valueEndOfYear}</td>
+            <td>{resultArr[0].interest}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   );
 }
